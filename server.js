@@ -1,7 +1,8 @@
 var express = require('express'),
     stylus = require('stylus'),
     nodemailer = require('nodemailer'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    underscore = require('underscore');
 
 // Env variable
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
@@ -23,10 +24,10 @@ app.configure(function(){
 
     app.use(express.logger('dev'));
     app.use(express.bodyParser());
-    app.use(stylus.middleware({
+    /*app.use(stylus.middleware({
         src: __dirname+'/public',
         compile: compile
-    }))
+    }))*/
     app.use(express.static(__dirname+'/public'));
 });
 
@@ -43,14 +44,26 @@ app.get('*',function(req,res){
 });
 
 app.post('/getlist', function(req, res) {
-    console.log('details request');
     
     BookList.getAllItems(function(success) {
         if ( !success ) {
-            res.send(500, 'Invalid user');
+            res.send(500);
             return;
         } else{
-            console.log('User found');
+            res.send(200, success);
+        }
+        
+        
+    });
+});
+
+app.post('/getcategories', function(req, res) {
+    
+    BookList.getCategories(function(success) {
+        if ( !success ) {
+            res.send(500);
+            return;
+        } else{
             res.send(200, success);
         }
         

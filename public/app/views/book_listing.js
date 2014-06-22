@@ -25,11 +25,13 @@ define([
 					});
 
 					$(_this.container, _this.el).html(BookListTemplate(params));
+					$('.item-single',_this.container).addClass('all');
+					
 				},
 				error:function(err){
 					console.log(err)
 				}
-			})
+			});
 		},
 
 		events:{

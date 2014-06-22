@@ -6,6 +6,7 @@ module.exports = function(mongoose) {
 		title: { type: String, unique: true },
 		author: { type: String },
 		tags: { type: String },
+		categories: { type: String },
 		photoUrl: { type: String },
 		description: { type: String }
 	});
@@ -41,7 +42,7 @@ module.exports = function(mongoose) {
 			}
 		});
 	};
-*/
+*/	
 	var getAllItems = function(callback) {
 
 		var user = Book.find({}, function getAll(err, doc){
@@ -55,17 +56,34 @@ module.exports = function(mongoose) {
 						title: doc[i].title,
 						author: doc[i].author,
 						tags: doc[i].tags,
+						categories: doc[i].categories,
 						photoUrl: doc[i].photoUrl,
 						description: doc[i].description
-					})
+					});
 				}
 				callback(details);
 			}
 		});
 	};
+
+	var getCategories = function(callback) {
+
+		var user = Book.find({}, function getAll(err, doc){
+			if (err) {
+				callback(false);
+			} else {
+				var categories = [];
+				for(var i=0; doc.length>i; i++){
+					categories.push(doc[i].categories);
+				}
+				callback(categories);
+			}
+		});
+	};
 	
 	return {
-		getAllItems: getAllItems,
-		Book: Book
+		getAllItems : getAllItems,
+		getCategories : getCategories,
+		Book : Book
 	}
 }

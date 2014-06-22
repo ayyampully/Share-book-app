@@ -118,6 +118,7 @@ body {
   color: #bbb;
   font-size: 12px;
   margin-right: 5px;
+  cursor: pointer;
 }
 #libApp  .content-body .filter ul {
   list-style: none;
@@ -130,19 +131,30 @@ body {
   width: 100%;
   margin-bottom: 0;
 }
+#libApp  .content-body .filter ul li input {
+  margin-left: 0;
+}
 #libApp  .content-body .filter ul li label {
   font-weight: normal;
   text-transform: none;
   font-size: 14px;
-  margin-left: 20px;
+  margin-left: 7px;
   float: left;
+  text-transform: capitalize;
 }
 #libApp .item-single {
   float: left;
   margin: 5px 3%;
-  width: 44%;
+  width: 43%;
   position: relative;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition:all .5s preserve-3d;
 }
+#libApp .item-single.all{display: inline-block; visibility: visible;
+  opacity: 1;}
+
 #libApp .item-single .image-holder {
   width: 36.5%;
   float: left;
@@ -199,4 +211,8 @@ body {
 }
 #libApp .rating-warp .rating li.active.half-star .icon {
   width: 12px;
+}
+#libApp .footer p{
+  float: left;
+  width: 100%;
 }
