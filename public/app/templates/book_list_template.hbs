@@ -1,0 +1,28 @@
+{{#each listItem}}
+<div class="item-single">
+	<div class="image-holder">
+	<a href="#" class="thumbnail">
+	  <img data-src="holder.js/100%x300" src="images/{{this.photoUrl}}" alt="The Hunger Games">
+	</a>
+	</div>
+	<div class="info">
+		<h4>{{this.title}}</h4>
+		<h6>by <a href="#">{{this.author}}</a></h6>
+		<p>{{this.description}}</p>
+		<div class="rating-warp">
+			<label class="rating-label">Rating: </label>
+			<ul class="rating" data-value="3.5">
+				<li class="active" data-value="1"><span class="icon"></span></li>
+				<li class="active" data-value="2"><span class="icon"></span></li>
+				<li class="active" data-value="3"><span class="icon"></span></li>
+				<li class="active half-star" data-value="4"><span class="icon"></span></li>
+				<li data-value="5"><span class="icon"></span></li>
+			</ul>
+		</div>
+		<div class="btn-holder" data-id="{{this.bookid}}">
+			<a class="request btn btn-primary btn-sm">Request</a>
+			<a class="wishlist btn btn-warning btn-sm">Add to Wishlist</a>
+		</div>
+	</div>
+</div>
+{{/each}}

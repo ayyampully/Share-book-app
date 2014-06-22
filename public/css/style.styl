@@ -1,0 +1,95 @@
+@font-face 
+    font-family: 'open_sansregular'
+    src: url('../fonts/OpenSans-Regular-webfont.eot')
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: 'open_sanslight'
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'open_sanssemibold'
+    src: url('../fonts/OpenSans-Semibold-webfont.eot')
+    src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg')
+    font-weight: normal
+    font-style: normal
+
+.flLeft
+	float left!important
+.flRight
+	float:right!important
+
+.mt0 {margin-top:0px!important}
+.mr0 {margin-right:0px!important}
+.mb0 {margin-bottom:0px!important}
+.ml0 {margin-left:0px!important}
+.pt0 {padding-top:0px!important}
+.pr0 {padding-right:0px!important}
+.pb0 {padding-bottom:0px!important}
+.pl0 {padding-left:0px!important}
+/* page */
+body {
+	font-family:'open_sansregular', verdana, Helvetica, sans-serif;
+	font-size:14px;
+	color:#494949;
+	background:#f6f6f6;
+    margin: 0;
+}
+.container{background:#fff}
+#libApp .header{background:#fff; min-height:150px}
+#libApp .ibar{background:#777; height:5px}
+#libApp .header .logo{font-size: 24px; margin-top:25px}
+#libApp .header .menubar{margin-top:115px; background:#777; padding-left: 25px; font-family: 'open_sanslight'; text-transform:uppercase}
+#libApp .header .menubar ul{margin:5px 0}
+#libApp .header .menubar ul li{color:#fff; line-height: 13px;
+border-left: 1px solid #fff;cursor:pointer}
+#libApp .header .menubar ul li:first-child{border:none}
+
+#libApp  .content-body{min-height:450px; padding:15px 0}
+#libApp  .content-body .filter{border:1px solid #ccc; float:left; width:100%; text-transform:uppercase; font-family: 'open_sanslight';}
+#libApp  .content-body .filter-header{float:left; width:100%; background:#eee;}
+#libApp  .content-body .filter-header h4{float:left; margin: 5px;
+font-size: 14px;}
+#libApp  .content-body .filter-header span{float:right; margin-top: 4px;
+color: #bbb; font-size: 12px;
+margin-right: 5px;}
+#libApp  .content-body .filter ul{list-style:none; margin:0; padding-left: 10px;}
+#libApp  .content-body .filter ul li{padding:4px 0; float:left; width:100%; margin-bottom: 0;}
+#libApp  .content-body .filter ul li label{font-weight:normal;text-transform: none;
+font-size: 14px; margin-left: 20px;
+float: left;}
+
+#libApp .item-single{float:left; margin:5px 3%; width:44%; position:relative}
+#libApp .item-single .image-holder{width:36.5%; float:left;}
+#libApp .item-single .image-holder .thumbnail{min-height: 195px;}
+#libApp .item-single .image-holder .thumbnail img{max-width:120px; max-height:185px}
+#libApp .item-single .info{float: right; width: 60%;}
+#libApp .item-single .info p{font-size: 12px;}
+#libApp .item-single .info .btn-holder{position:absolute; bottom: 21px; left: 145px;}
+
+#libApp .rating-warp{position: absolute; bottom: 65px; left: 145px;}
+#libApp .rating-warp .rating{margin:0; padding:0; float:left; list-style:none; }
+#libApp .rating-warp .rating-label{float:left; font-weight:normal; display:none}
+#libApp .rating-warp .rating li{float:left; margin-left:5px; width:24px; height:24px; 
+background:url('../images/no-rating.png') 0 0 no-repeat;}
+#libApp .rating-warp .rating li .icon{float:left;width:24px; height:24px;}
+#libApp .rating-warp .rating li.active .icon{background:url('../images/rating.png') 0 0 no-repeat;}
+#libApp .rating-warp .rating li.active.half-star .icon{width:12px}
+
+
+
+
